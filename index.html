@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author='Victor'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CDN link for font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='./styles.css'>
+    <title>Aloha</title>
+</head>
+
+<body>
+    <header>
+
+        <div class='container'>
+            <img src="./images/aloha-logo.svg" alt='aloha-logo' class='logo'>
+            <!-- It's better to use relative path rather than absolute path, because if you need to move your 
+            files around it can be hard to define what the absolute path is. *current example is relative path*-->
+            <div class='navitems'>
+                <ul>
+                    <li><a href='#about'>ABOUT</a></li>
+                    <li><a href='#shop'>SHOP</a></li>
+                    <li><a href='#featured'>FEATURED</a></li>
+                    <li><a href='#updates'>UPDATES</a></li>
+                </ul>
+            </div>
+            <img src='./images/cart-icon.svg' alt='cart-icon' class='cart'>
+    </header>
+
+    <section class="banner">
+
+        <h4>NEW COLLECTION</h4>
+        <h1>Spring/Summer 2018</h1>
+
+    </section>
+    <section class='banner2'>
+        <h1><span>Hand-Crafted </span><b>Styles</h1>
+        <p>Aloha Appearl.co sells only the finest ready-to-travel cloting.
+            Browse our current selection of products or sign-up for updates below.
+        </p>
+        <!-- You should give the span a class, so you can manipulate that span specifically -->
+    </section>
+    <!-- <div class='boxes'>
+        <div class='men's>
+            <h1>Men's</h1>
+        </div>
+        <div class='trends's>
+                <h1>Trends</h1>
+        </div>
+        <div class='glasses's>
+                <h1>Glasses</h1>
+            </div>
+        
+
+    </div> 
+
+    In this case, i can make a div called boxes and make each individual box its own div and have have its own class but this way
+is not the most efficient, because if we do it like a <ul> it will be much easier and just modify the <li>s-->
+    <section class='catalog'>
+        <ul class='boxes'>
+            <li class='box1'><a href='#'></a>MEN'S</li>
+            <li class='box2'><a href='#'></a>TREND'S</li>
+            <li class='box3'><a href='#'></a>GLASSES</li>
+            <li class='box4'><a href='#'></a>SALES</li>
+            <li class='box5'><a href='#'></a>BAGS</li>
+            <li class='box6'><a href='#'></a>WOMEN'S</li>
+        </ul>
+    </section>
+
+    <section class='products'>
+        <ul>
+            <li> <img src='./images/checked-stretch-dress.jpg'>
+                <p>dresses<span>Checked Stretch Dress</span>$129.00</p>
+            </li>
+            <li> <img src='./images/blue-hipster-backpack.jpg'>
+                <p>Bags<span>Blue Hipster Backpack</span>$69.00</p>
+            </li>
+        </ul>
+
+    </section>
+    <div class='formbanner'>
+
+        <h2>Sign-up for <span>Updates</span></h2>
+        <p>Stay updated on our latest product releases,be the first to find out about upcoming sales and get free
+            style tips from our blog. Unsubscribe at any time.</p>
+
+        <form action='www.aloha.com/forms' mehtod='POST'>
+            <input type="e-mail" placeholder="Your E-mail">
+            <input type='submit' value='Subscribe' class='submit'>
+        </form>
+    </div>
+
+    <div class='footer'>
+        <div class='footertxt'>
+            <p class='copyright'> &copy;2019 Aloha Apparel Co. Powered by HTML and CSS.</p>
+            <p class='contact'>604-604-6040. <a href='info@alohaapparel.com'>info@alohaapparel.com</a></p>
+            <p class='address'>1490 W Broadway Vancouver, BC, Canada</p>
+        </div>
+
+        <ul class='socialmedia'>
+            <li><a href='#'><i class="fab fa-facebook fa-spin"></i> Facebook</li></a>
+            <li><a href='#'><i class="fab fa-twitter-square"></i>Twitter</li></a>
+            <li><a href='#'><i class="fab fa-instagram"></i>Instagram</li></a>
+            <li><a href='#'><i class="fab fa-pinterest-square"></i>Pinterest</li></a>
+            <li><a href='#'><i class="fab fa-google-plus-square"></i>Google+</li></a>
+        </ul>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
