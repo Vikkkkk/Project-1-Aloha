@@ -87,16 +87,431 @@ a:visited {
   font-family: "raleway-meidum";
   color: coral;
 }
+.container {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-@media screen and (max-width: 960px) {
-  header {
-    display: flex;
-    flex-direction: column;
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
+    url("./images/banner-girl.png") no-repeat bottom,
+    url("./images/flower-bkgd.jpg") no-repeat top;
+  height: 600px;
+  background-size: cover, 15%, cover;
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: "playfair-regular";
+  font-size: 65px;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.banner h4 {
+  /* position: absolute; */
+  /* left: 45%;
+top: 38%; */
+  /* text-align: center; */
+  font-family: "raleway-light";
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.banner2 {
+  text-align: center;
+}
+
+.banner2 h1 {
+  font-family: "playfair-bold";
+  font-size: 2.4rem;
+  margin-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.banner2 span {
+  font-family: "playfair-italic";
+  font-weight: 400;
+}
+
+.banner2 p {
+  display: block;
+  margin: 0 30%;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: "raleway-light";
+  font-weight: 200;
+  /* padding-bottom: 3%; */
+  margin-bottom: 5%;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  max-width: 100%;
+}
+
+.boxes li {
+  font-family: "raleway-light";
+  font-size: 2.4rem;
+  color: white;
+}
+.box1 {
+  /* background-image: url("./images/mens-category.jpg"); */
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/mens-category.jpg") 50% center / cover no-repeat;
+  /* width: 45%; */
+  flex-basis: 50%;
+  border: 5px solid white;
+  height: 366px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/trends-category.jpg") 50% center / cover no-repeat;
+  /* background-image: url("./images/trends-category.jpg"); */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 5px solid white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/glasses-category.jpg") 50% center / cover no-repeat;
+  /* background-image: url("./images/glasses-category.jpg"); */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 5px solid white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/sale-category.jpg") 50% center / cover no-repeat;
+
+  /* background-image: url("./images/sale-category.jpg"); */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 5px solid white;
+  height: 366px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/bags-category.jpg") 50% center / cover no-repeat;
+  /* background-image: url("./images/bags-category.jpg"); */
+  /* width: 25%; */
+  flex-basis: 25%;
+  border: 5px solid white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+      0% / cover,
+    url("./images/womens-category.jpg") 50% center / cover no-repeat;
+  /* background-image: url("./images/womens-category.jpg"); */
+  /* width: 45%; */
+  flex-basis: 50%;
+  border: 5px solid white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  background: /* linear-gradient(rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.5)), */ url("./images/wave-bkgd.jpg")
+    no-repeat bottom;
+  height: 343px;
+  background-size: cover;
+}
+
+.formbanner h2 {
+  font-family: "playfair-italic";
+  font-weight: 400;
+  font-size: 2.4rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.formbanner span {
+  font-family: "playfair-bold";
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.formbanner p {
+  margin: 0% 27% 3% 27%;
+  line-height: 30px;
+  font-size: 18px;
+  font-family: "raleway-light";
+  font-weight: 200;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.formbanner form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+input[type="e-mail"] {
+  width: 445px;
+  height: 48px;
+  border-radius: 30px;
+  padding-left: 25px;
+  font-family: "raleway-regular";
+  font-size: 1rem;
+  color: red;
+}
+
+.submit {
+  margin-left: -116px;
+  border-radius: 27px;
+  border: 0.5rem;
+  border-color: white;
+  width: 113px;
+  height: 38px;
+  background-color: #e2574c;
+  color: white;
+  font-family: "raleway-regular";
+  font-size: 1rem;
+}
+
+.submit:hover {
+  background-color: #c44a42;
+}
+
+.footer {
+  background-color: #242424;
+  color: white;
+  margin-top: 15px;
+  font-family: "playfair-regular";
+  font-weight: 400;
+  font-size: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration-line: underline;
+}
+
+.footertxt {
+  margin: 5% 5% 5% 5%;
+}
+
+.copyright {
+  margin: 0 19% 7% 19%;
+}
+.contact {
+  margin: 0 0 7% 19%;
+}
+.address {
+  margin: 0 30% 7% 19%;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-right: 15%;
+}
+.socialmedia li {
+  list-style: none;
+  font-family: "raleway-light";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.socialmedia li a {
+  color: white;
+  text-decoration: none;
+}
+
+.socialmedia li a:hover {
+  color: coral;
+}
+
+.socialmedia li i {
+  margin-right: 0.3rem;
+}
+
+i:hover {
+  color: green;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    justify-content: center;
+    align-content: center;
   }
 
-  .topcontainer {
+  .logo {
+    order: 1;
+    width: 49%;
+    margin-left: 1%;
+  }
+
+  .logo img {
+    width: auto;
+    height: 3.875rem;
+  }
+
+  .navitems {
+    order: 3;
+    width: 100%;
+    /* margin: 0% 20%; */
+  }
+  .navitems ul {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    display: block;
+    text-align: center;
+    border-top: 1px solid #d7d7d7;
+    padding-top: 0.5rem;
+    /* align-items: center; */
+  }
+
+  .navitems ul li {
+    list-style-type: none;
+    padding: 0 1rem;
+    display: inline-block;
+  }
+  .navitems ul li a {
+    text-decoration: none;
+    font-family: "raleway-light";
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .cart {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+    width: 49%;
+    margin-right: 1%;
+  }
+
+  .cart img {
+    width: 3.875rem;
+    height: 3.875rem;
+  }
+}
+
+/* Tablet version here */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 1% auto;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .logo img {
+    width: auto;
+    height: 3rem;
+    margin-left: 20%;
+  }
+
+  .cart {
+    width: 12%;
+  }
+
+  .cart img {
+    width: auto;
+    height: 3rem;
+    margin-right: 10%;
+
+    /* display: inline-block;
+  margin-left: 18%; */
+  }
+
+  .navitems {
+    width: 45%;
+    margin-top: 2%;
+  }
+  .navitems ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navitems ul li {
+    margin-right: 1%;
+  }
+
+  .navitems ul li a {
+    text-decoration: none;
+    font-family: "raleway-medium";
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    background-size: cover, 150px 369px, cover;
+    height: 400px;
+  }
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner2 p {
+    display: block;
+    margin: 0 5%;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: "raleway-light";
+    font-weight: 200;
+    /* padding-bottom: 3%; */
+    margin-bottom: 5%;
   }
 }
 
@@ -105,18 +520,14 @@ a:visited {
   .container {
     max-width: 1240px;
     margin: 1% auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
-  .logo {
+  .logo img {
     width: auto;
     height: 3.875rem;
   }
 
-  .cart {
+  .cart img {
     margin-right: 4%;
     width: 3.875rem;
     height: 3.875rem;
@@ -140,11 +551,12 @@ a:visited {
   .navitems li a {
     text-decoration: none;
     font-family: "raleway-medium";
+    font-size: 0.9rem;
     /* padding: 1.5rem; */
     /* list-style-type: none; */
   }
 
-  .banner {
+  /* .banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,286 +566,8 @@ a:visited {
       url("./images/flower-bkgd.jpg") no-repeat center top;
     height: 600px;
     background-size: cover, 15%, cover;
-    text-align: center;
-    /* the first parameter is for the 1st bg url, and 2nd is for the 2nd url */
-    /* using flex is more flexible than using position abosolute, so i commented
+    text-align: center; */
+  /* the first parameter is for the 1st bg url, and 2nd is for the 2nd url */
+  /* using flex is more flexible than using position abosolute, so i commented
   out the position tags and used flex-box instead. */
-  }
-
-  .banner h1 {
-    /* position: absolute; */
-    /* left: 27%;
-  top: 40%; */
-    /* text-align: center; */
-    font-family: "playfair-regular";
-    font-size: 65px;
-    color: white;
-    text-shadow: 2px 2px 8px #000000;
-  }
-
-  .banner h4 {
-    /* position: absolute; */
-    /* left: 45%;
-  top: 38%; */
-    /* text-align: center; */
-    font-family: "raleway-light";
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 8px #000000;
-  }
-
-  .banner2 {
-    text-align: center;
-  }
-
-  .banner2 h1 {
-    font-family: "playfair-bold";
-    font-size: 2.4rem;
-    margin-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
-
-  .banner2 span {
-    font-family: "playfair-italic";
-    font-weight: 400;
-  }
-
-  .banner2 p {
-    display: block;
-    margin: 0 30%;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: "raleway-light";
-    font-weight: 200;
-    /* padding-bottom: 3%; */
-    margin-bottom: 5%;
-  }
-
-  .boxes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    max-width: 100%;
-  }
-
-  .boxes li {
-    font-family: "raleway-light";
-    font-size: 2.4rem;
-    color: white;
-  }
-  .box1 {
-    /* background-image: url("./images/mens-category.jpg"); */
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/mens-category.jpg") 50% center / cover no-repeat;
-    /* width: 45%; */
-    flex-basis: 50%;
-    border: 5px solid white;
-    height: 366px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/trends-category.jpg") 50% center / cover no-repeat;
-    /* background-image: url("./images/trends-category.jpg"); */
-    /* width: 25%; */
-    flex-basis: 25%;
-    border: 5px solid white;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box3 {
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/glasses-category.jpg") 50% center / cover no-repeat;
-    /* background-image: url("./images/glasses-category.jpg"); */
-    /* width: 25%; */
-    flex-basis: 25%;
-    border: 5px solid white;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .box4 {
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/sale-category.jpg") 50% center / cover no-repeat;
-
-    /* background-image: url("./images/sale-category.jpg"); */
-    /* width: 25%; */
-    flex-basis: 25%;
-    border: 5px solid white;
-    height: 366px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box5 {
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/bags-category.jpg") 50% center / cover no-repeat;
-    /* background-image: url("./images/bags-category.jpg"); */
-    /* width: 25%; */
-    flex-basis: 25%;
-    border: 5px solid white;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .box6 {
-    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
-        0% / cover,
-      url("./images/womens-category.jpg") 50% center / cover no-repeat;
-    /* background-image: url("./images/womens-category.jpg"); */
-    /* width: 45%; */
-    flex-basis: 50%;
-    border: 5px solid white;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .formbanner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    background: /* linear-gradient(rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.5)), */ url("./images/wave-bkgd.jpg")
-      no-repeat bottom;
-    height: 343px;
-    background-size: cover;
-  }
-
-  .formbanner h2 {
-    font-family: "playfair-italic";
-    font-weight: 400;
-    font-size: 2.4rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    color: white;
-    text-shadow: 2px 2px 8px #000000;
-  }
-
-  .formbanner span {
-    font-family: "playfair-bold";
-    text-shadow: 2px 2px 8px #000000;
-  }
-
-  .formbanner p {
-    margin: 0% 27% 3% 27%;
-    line-height: 30px;
-    font-size: 18px;
-    font-family: "raleway-light";
-    font-weight: 200;
-    color: white;
-    text-shadow: 2px 2px 8px #000000;
-  }
-
-  .formbanner form {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    color: white;
-  }
-
-  input[type="e-mail"] {
-    width: 445px;
-    height: 48px;
-    border-radius: 30px;
-    padding-left: 25px;
-    font-family: "raleway-regular";
-    font-size: 1rem;
-    color: red;
-  }
-
-  .submit {
-    margin-left: -116px;
-    border-radius: 27px;
-    border: 0.5rem;
-    border-color: white;
-    width: 113px;
-    height: 38px;
-    background-color: #e2574c;
-    color: white;
-    font-family: "raleway-regular";
-    font-size: 1rem;
-  }
-
-  .submit:hover {
-    background-color: #c44a42;
-  }
-
-  .footer {
-    background-color: #242424;
-    color: white;
-    margin-top: 15px;
-    font-family: "playfair-regular";
-    font-weight: 400;
-    font-size: 1rem;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer a {
-    color: white;
-    text-decoration-line: underline;
-  }
-
-  .footertxt {
-    margin: 5% 5% 5% 5%;
-  }
-
-  .copyright {
-    margin: 0 19% 7% 19%;
-  }
-  .contact {
-    margin: 0 0 7% 19%;
-  }
-  .address {
-    margin: 0 30% 7% 19%;
-  }
-
-  .socialmedia {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    margin-right: 15%;
-  }
-  .socialmedia li {
-    list-style: none;
-    font-family: "raleway-light";
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  .socialmedia li a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .socialmedia li a:hover {
-    color: coral;
-  }
-
-  .socialmedia li i {
-    margin-right: 0.3rem;
-  }
-
-  i:hover {
-    color: green;
-  }
 }
