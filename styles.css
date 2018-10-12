@@ -383,6 +383,7 @@ i:hover {
   color: green;
 }
 
+/* mobile version here */
 @media screen and (max-width: 425px) {
   .container {
     justify-content: center;
