@@ -6,11 +6,16 @@
     <meta author='Victor'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aloha</title>
+
     <!-- CDN link for font-awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel='stylesheet' href='./styles.css'>
-    <title>Aloha</title>
+
+    <!-- flikity link -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 </head>
 
 <body>
@@ -29,6 +34,7 @@
                     <li><a href='#featured'>FEATURED</a></li>
                     <li><a href='#updates'>UPDATES</a></li>
                 </ul>
+                <!-- the link here only work with ids not classes -->
             </div>
             <div class='cart'>
                 <img src='./images/cart-icon.svg' alt='cart-icon' class='cart'>
@@ -42,7 +48,7 @@
         <h1>Spring/Summer 2018</h1>
 
     </section>
-    <section class='banner2'>
+    <section class='banner2' id="about">
         <h1><span>Hand-Crafted </span><b>Styles</h1>
         <p>Aloha Appearl.co sells only the finest ready-to-travel cloting.
             Browse our current selection of products or sign-up for updates below.
@@ -65,7 +71,7 @@
 
     In this case, i can make a div called boxes and make each individual box its own div and have have its own class but this way
 is not the most efficient, because if we do it like a <ul> it will be much easier and just modify the <li>s-->
-    <section class='catalog'>
+    <section class='catalog' id='shop'>
         <ul class='boxes'>
             <li class='box1'><a href='#'></a>MEN'S</li>
             <li class='box2'><a href='#'></a>TREND'S</li>
@@ -76,18 +82,31 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
         </ul>
     </section>
 
-    <section class='products'>
-        <ul>
-            <li> <img src='./images/checked-stretch-dress.jpg'>
-                <p>dresses<span>Checked Stretch Dress</span>$129.00</p>
+    <section class='featured' id='featured'>
+        <h2>Most-Loved <span>Products</span></h2>
+        <ul class='main-carousel'>
+            <li class='carousel-cell'> <img src='./images/checked-stretch-dress.jpg'>
+                <p>dresses<br><br><span>Checked Stretch Dress</span><br><br>$129.00</p>
             </li>
-            <li> <img src='./images/blue-hipster-backpack.jpg'>
-                <p>Bags<span>Blue Hipster Backpack</span>$69.00</p>
+            <li class='carousel-cell'> <img src='./images/blue-hipster-backpack.jpg'>
+                <p>Bags<br><br><span>Blue Hipster Backpack</span><br><br>$69.00</p>
+            </li>
+            <li class='carousel-cell'> <img src='./images/blue-silk-dress.jpg'>
+                <p>Bags<br><br><span>Blue Silk Dress</span><br><br>$69.00</p>
+            </li>
+            <li class='carousel-cell'> <img src='./images/cotton-blue-shirt.jpg'>
+                <p>Bags<br><br><span>Cotton Blue Shirt</span><br><br>$69.00</p>
+            </li>
+            <li class='carousel-cell'> <img src='./images/cotton-yellow-tshirt.jpg'>
+                <p>Bags<br><br><span>Cotton Yellow T-Shirt</span><br><br>$69.00</p>
+            </li>
+            <li class='carousel-cell'> <img src='./images/demin-overall-shorts.jpg'>
+                <p>Bags<br><br><span>Demin Overall Shorts</span><br><br>$69.00</p>
             </li>
         </ul>
 
     </section>
-    <div class='formbanner'>
+    <div class='formbanner' id='updates'>
 
         <h2>Sign-up for <span>Updates</span></h2>
         <p>Stay updated on our latest product releases,be the first to find out about upcoming sales and get free
@@ -101,23 +120,31 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
 
     <div class='footer'>
         <div class='footertxt'>
-            <p class='copyright'> &copy;2019 Aloha Apparel Co. Powered by HTML and CSS.</p>
+            <p class='copyright'> &copy;2019 Aloha Apparel Co.<br>Powered by HTML and CSS.</p>
+            <br>
             <p class='contact'>604-604-6040. <a href='info@alohaapparel.com'>info@alohaapparel.com</a></p>
-            <p class='address'>1490 W Broadway Vancouver, BC, Canada</p>
+            <br>
+            <p class='address'>1490 W Broadway <br>Vancouver, BC, Canada</p>
         </div>
 
         <ul class='socialmedia'>
-            <li><a href='#'><i class="fab fa-facebook fa-spin"></i> Facebook</li></a>
-            <li><a href='#'><i class="fab fa-twitter-square"></i>Twitter</li></a>
-            <li><a href='#'><i class="fab fa-instagram"></i>Instagram</li></a>
-            <li><a href='#'><i class="fab fa-pinterest-square"></i>Pinterest</li></a>
-            <li><a href='#'><i class="fab fa-google-plus-square"></i>Google+</li></a>
+            <li><a href='#'><i class="fab fa-facebook fa-spin"></i><span id="facebook">Facebook</span></li></a>
+            <li><a href='#'><i class="fab fa-twitter-square"></i><span>Twitter</span></li></a>
+            <li><a href='#'><i class="fab fa-instagram"></i><span>Instagram</span></li></a>
+            <li><a href='#'><i class="fab fa-pinterest-square"></i><span>Pinterest</span></li></a>
+            <li><a href='#'><i class="fab fa-google-plus-square"></i><span>Google+</span></li></a>
         </ul>
 
     </div>
 
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+    <!-- JavaScript flikity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <script src='js/script.js'></script>
 </body>

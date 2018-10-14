@@ -87,8 +87,15 @@ a:visited {
   font-family: "raleway-meidum";
   color: coral;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  padding-bottom: 0.5rem;
+  width: 100%;
+  /* padding-bottom: 0.5rem; */
   padding-top: 1rem;
   width: 100%;
   display: flex;
@@ -97,22 +104,78 @@ a:visited {
   justify-content: space-between;
 }
 
+.logo {
+  order: 1;
+  width: 50%;
+  align-self: flex-start;
+}
+
+.logo img {
+  width: auto;
+  height: 3rem;
+  margin-left: 3vw;
+  text-align: left;
+}
+
+.cart {
+  order: 2;
+  width: 50%;
+  text-align: right;
+}
+
+.cart img {
+  width: auto;
+  height: 3rem;
+  margin-right: 5vw;
+
+  /* display: inline-block;
+margin-left: 18%; */
+}
+
+.navitems {
+  order: 3;
+  width: 100%;
+  margin-top: 2% 10%;
+  border-top: 1px solid #d7d7d7;
+}
+.navitems ul {
+  /* width: 100%; */
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin: 3vw 10vw;
+}
+
+.navitems ul li {
+  margin-right: 1%;
+}
+
+.navitems ul li a {
+  text-decoration: none;
+  font-family: "raleway-medium";
+  font-size: 0.9rem;
+}
+
 .banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)),
     url("./images/banner-girl.png") no-repeat bottom,
-    url("./images/flower-bkgd.jpg") no-repeat top;
-  height: 600px;
-  background-size: cover, 15%, cover;
+    url("./images/flower-bkgd.jpg") repeat-x top;
+  height: 400px;
+  background-size: cover, 35%, cover;
   text-align: center;
 }
 
 .banner h1 {
+  width: 70%;
   font-family: "playfair-regular";
-  font-size: 65px;
+  font-size: 2.5rem;
+  font-weight: 400;
   color: white;
   text-shadow: 2px 2px 8px #000000;
 }
@@ -123,7 +186,7 @@ a:visited {
 top: 38%; */
   /* text-align: center; */
   font-family: "raleway-light";
-  font-size: 20px;
+  font-size: 1.2rem;
   color: white;
   text-shadow: 2px 2px 8px #000000;
 }
@@ -135,8 +198,8 @@ top: 38%; */
 .banner2 h1 {
   font-family: "playfair-bold";
   font-size: 2.4rem;
-  margin-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  padding: 3rem 0;
+  /* padding-bottom: 3.5rem; */
 }
 
 .banner2 span {
@@ -146,7 +209,7 @@ top: 38%; */
 
 .banner2 p {
   display: block;
-  margin: 0 30%;
+  margin: 0 5vw;
   line-height: 40px;
   font-size: 18px;
   font-family: "raleway-light";
@@ -165,18 +228,20 @@ top: 38%; */
 
 .boxes li {
   font-family: "raleway-light";
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   color: white;
+  text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
 }
+
 .box1 {
   /* background-image: url("./images/mens-category.jpg"); */
   background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
       0% / cover,
     url("./images/mens-category.jpg") 50% center / cover no-repeat;
   /* width: 45%; */
-  flex-basis: 50%;
+  flex-basis: 100%;
   border: 5px solid white;
-  height: 366px;
+  height: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,9 +252,9 @@ top: 38%; */
     url("./images/trends-category.jpg") 50% center / cover no-repeat;
   /* background-image: url("./images/trends-category.jpg"); */
   /* width: 25%; */
-  flex-basis: 25%;
+  flex-basis: 50%;
   border: 5px solid white;
-  height: auto;
+  height: 47vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,9 +265,9 @@ top: 38%; */
     url("./images/glasses-category.jpg") 50% center / cover no-repeat;
   /* background-image: url("./images/glasses-category.jpg"); */
   /* width: 25%; */
-  flex-basis: 25%;
+  flex-basis: 50%;
   border: 5px solid white;
-  height: auto;
+  height: 47vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,9 +280,9 @@ top: 38%; */
 
   /* background-image: url("./images/sale-category.jpg"); */
   /* width: 25%; */
-  flex-basis: 25%;
+  flex-basis: 50%;
   border: 5px solid white;
-  height: 366px;
+  height: 47vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,9 +293,9 @@ top: 38%; */
     url("./images/bags-category.jpg") 50% center / cover no-repeat;
   /* background-image: url("./images/bags-category.jpg"); */
   /* width: 25%; */
-  flex-basis: 25%;
+  flex-basis: 50%;
   border: 5px solid white;
-  height: auto;
+  height: 47vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,12 +306,48 @@ top: 38%; */
     url("./images/womens-category.jpg") 50% center / cover no-repeat;
   /* background-image: url("./images/womens-category.jpg"); */
   /* width: 45%; */
-  flex-basis: 50%;
+  flex-basis: 100%;
   border: 5px solid white;
-  height: auto;
+  height: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.featured h2 {
+  margin-top: 5vw;
+  text-align: center;
+  font-family: "playfair-italic";
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.featured h2 span {
+  font-family: "playfair-bold";
+  font-size: 2rem;
+  font-weight: 700;
+}
+.main-carousel {
+  margin-bottom: 15vw;
+}
+.main-carousel .carousel-cell {
+  margin: 5vw 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.main-carousel .carousel-cell p {
+  font-family: "raleway-light";
+  text-transform: uppercase;
+  color: grey;
+  font-size: 0.7rem;
+}
+
+.main-carousel .carousel-cell p span {
+  color: coral;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
 .formbanner {
@@ -257,15 +358,13 @@ top: 38%; */
   /* position: relative; */
   background: /* linear-gradient(rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.5)), */ url("./images/wave-bkgd.jpg")
     no-repeat bottom;
-  height: 343px;
-  background-size: cover;
+  height: 75vw;
 }
 
 .formbanner h2 {
   font-family: "playfair-italic";
   font-weight: 400;
-  font-size: 2.4rem;
-  font-style: italic;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: white;
   text-shadow: 2px 2px 8px #000000;
@@ -277,9 +376,9 @@ top: 38%; */
 }
 
 .formbanner p {
-  margin: 0% 27% 3% 27%;
+  margin: 0% 4% 8% 4%;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "raleway-light";
   font-weight: 200;
   color: white;
@@ -295,7 +394,7 @@ top: 38%; */
 }
 
 input[type="e-mail"] {
-  width: 445px;
+  width: 90vw;
   height: 48px;
   border-radius: 30px;
   padding-left: 25px;
@@ -324,13 +423,13 @@ input[type="e-mail"] {
 .footer {
   background-color: #242424;
   color: white;
-  margin-top: 15px;
+  margin-top: 1%;
   font-family: "playfair-regular";
   font-weight: 400;
-  font-size: 1rem;
-
+  font-size: 0.8rem;
+  padding: 5% 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -341,24 +440,31 @@ input[type="e-mail"] {
 }
 
 .footertxt {
-  margin: 5% 5% 5% 5%;
+  margin: 10% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .copyright {
-  margin: 0 19% 7% 19%;
+  /* margin: 0 19% 7% 19%; */
 }
 .contact {
-  margin: 0 0 7% 19%;
+  /* margin: 0 0 7% 19%; */
 }
 .address {
-  margin: 0 30% 7% 19%;
+  /* margin: 0 30% 7% 19%; */
+  color: grey;
 }
 
 .socialmedia {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  margin-right: 15%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 .socialmedia li {
   list-style: none;
@@ -369,6 +475,11 @@ input[type="e-mail"] {
 .socialmedia li a {
   color: white;
   text-decoration: none;
+  margin: 0 2vw;
+}
+
+.socialmedia li span {
+  display: none;
 }
 
 .socialmedia li a:hover {
@@ -383,69 +494,12 @@ i:hover {
   color: green;
 }
 
-/* mobile version here */
-@media screen and (max-width: 425px) {
-  .container {
-    justify-content: center;
-    align-content: center;
-  }
-
-  .logo {
-    order: 1;
-    width: 49%;
-    margin-left: 1%;
-  }
-
-  .logo img {
-    width: auto;
-    height: 3.875rem;
-  }
-
-  .navitems {
-    order: 3;
-    width: 100%;
-    /* margin: 0% 20%; */
-  }
-  .navitems ul {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-    display: block;
-    text-align: center;
-    border-top: 1px solid #d7d7d7;
-    padding-top: 0.5rem;
-    /* align-items: center; */
-  }
-
-  .navitems ul li {
-    list-style-type: none;
-    padding: 0 1rem;
-    display: inline-block;
-  }
-  .navitems ul li a {
-    text-decoration: none;
-    font-family: "raleway-light";
-    font-weight: 700;
-    font-size: 0.9rem;
-  }
-
-  .cart {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    order: 2;
-    width: 49%;
-    margin-right: 1%;
-  }
-
-  .cart img {
-    width: 3.875rem;
-    height: 3.875rem;
-  }
-}
-
 /* Tablet version here */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) {
+  .main-carousel .carousel-cell {
+    width: 50%;
+  }
+
   .container {
     width: 100%;
     margin: 1% auto;
@@ -517,7 +571,7 @@ i:hover {
 }
 
 /* The Desk Top Version Below */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1240px) {
   .container {
     max-width: 1240px;
     margin: 1% auto;
@@ -557,6 +611,96 @@ i:hover {
     /* list-style-type: none; */
   }
 
+  .boxes li {
+    font-family: "raleway-light";
+    font-size: 2.4rem;
+    color: white;
+  }
+
+  .box1 {
+    /* background-image: url("./images/mens-category.jpg"); */
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/mens-category.jpg") 50% center / cover no-repeat;
+    /* width: 45%; */
+    flex-basis: 50%;
+    border: 5px solid white;
+    height: 366px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/trends-category.jpg") 50% center / cover no-repeat;
+    /* background-image: url("./images/trends-category.jpg"); */
+    /* width: 25%; */
+    flex-basis: 25%;
+    border: 5px solid white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/glasses-category.jpg") 50% center / cover no-repeat;
+    /* background-image: url("./images/glasses-category.jpg"); */
+    /* width: 25%; */
+    flex-basis: 25%;
+    border: 5px solid white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/sale-category.jpg") 50% center / cover no-repeat;
+
+    /* background-image: url("./images/sale-category.jpg"); */
+    /* width: 25%; */
+    flex-basis: 25%;
+    border: 5px solid white;
+    height: 366px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/bags-category.jpg") 50% center / cover no-repeat;
+    /* background-image: url("./images/bags-category.jpg"); */
+    /* width: 25%; */
+    flex-basis: 25%;
+    border: 5px solid white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
+        0% / cover,
+      url("./images/womens-category.jpg") 50% center / cover no-repeat;
+    /* background-image: url("./images/womens-category.jpg"); */
+    /* width: 45%; */
+    flex-basis: 50%;
+    border: 5px solid white;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-carousel .carousel-cell {
+    width: 25%;
+  }
   /* .banner {
     display: flex;
     flex-direction: column;
@@ -571,4 +715,52 @@ i:hover {
   /* the first parameter is for the 1st bg url, and 2nd is for the 2nd url */
   /* using flex is more flexible than using position abosolute, so i commented
   out the position tags and used flex-box instead. */
+
+  .footer a {
+    color: white;
+    text-decoration-line: underline;
+  }
+
+  .footertxt {
+    margin: 5% 5% 5% 5%;
+  }
+
+  .copyright {
+    margin: 0 19% 7% 19%;
+  }
+  .contact {
+    margin: 0 0 7% 19%;
+  }
+  .address {
+    margin: 0 30% 7% 19%;
+  }
+
+  .socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-right: 15%;
+  }
+  .socialmedia li {
+    list-style: none;
+    font-family: "raleway-light";
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .socialmedia li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .socialmedia li a:hover {
+    color: coral;
+  }
+
+  .socialmedia li i {
+    margin-right: 0.3rem;
+  }
+
+  i:hover {
+    color: green;
+  }
 }
