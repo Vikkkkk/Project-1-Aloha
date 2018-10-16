@@ -53,4 +53,13 @@ $(document).ready(function() {
     wrapAround: true
     // contain: true
   });
+
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    if ($("#e-mail").val() == "") {
+      alert("You missed the field.");
+    } else {
+      alert("Thanks for filling the field!");
+    }
+  });
 });
