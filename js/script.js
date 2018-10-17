@@ -2,6 +2,25 @@ console.log("hello");
 $(document).ready(function() {
   //the document ready thing is a command that lets everything load first. but if you have the script near the bottom of the body then you dont really need this bit.
 
+  // When the user scrolls the page, execute StickyFunction
+  window.onscroll = function() {
+    StickyFunction();
+  };
+
+  // Get the header
+  var header = document.getElementById("myHeader");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function StickyFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
   // Select all links with hashes
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -50,16 +69,24 @@ $(document).ready(function() {
   $(".main-carousel").flickity({
     // options
     cellAlign: "left",
-    wrapAround: true
-    // contain: true
+    wrapAround: true,
+    contain: true,
+    prevNextButtons: false
   });
 
   $("form").on("submit", function(event) {
     event.preventDefault();
     if ($("#e-mail").val() == "") {
-      alert("You missed the field.");
+      alert("You missed the field Dumbass!! 🤬");
     } else {
       alert("Thanks for filling the field!");
     }
+  });
+
+  let cartitem = 0;
+
+  $("button").click(function() {
+    cartitem++;
+    $(".count").html(cartitem);
   });
 });
