@@ -94,6 +94,23 @@ img {
 }
 /* mobile version */
 @media screen and (min-width: 0px) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+  header {
+    background-color: white;
+    z-index: 99;
+  }
+
+  .sticky + header {
+    padding-top: 102px;
+  }
+
   .container {
     width: 100%;
     /* padding-bottom: 0.5rem; */
@@ -105,12 +122,6 @@ img {
     justify-content: space-between;
   }
 
-  .logo {
-    order: 1;
-    width: 50%;
-    align-self: flex-start;
-  }
-
   .logo img {
     width: auto;
     height: 3rem;
@@ -119,9 +130,20 @@ img {
   }
 
   .cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     order: 2;
-    width: 50%;
+    width: 25%;
     text-align: right;
+  }
+
+  .count {
+    font-family: "raleway-regular";
+    font-size: 1.1rem;
+    color: coral;
+    margin-left: 10%;
   }
 
   .cart img {
@@ -136,7 +158,7 @@ margin-left: 18%; */
   .navitems {
     order: 3;
     width: 100%;
-    margin-top: 2% 10%;
+    /* margin-top: 2% 10%; */
     border-top: 1px solid #d7d7d7;
   }
   .navitems ul {
@@ -145,7 +167,7 @@ margin-left: 18%; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    text-align: center;
+    /* text-align: center; */
     margin: 3vw 10vw;
   }
 
@@ -156,7 +178,7 @@ margin-left: 18%; */
   .navitems ul li a {
     text-decoration: none;
     font-family: "raleway-medium";
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .banner {
@@ -168,7 +190,7 @@ margin-left: 18%; */
       url("./images/banner-girl.png") no-repeat bottom,
       url("./images/flower-bkgd.jpg") repeat-x top;
     height: 400px;
-    background-size: cover, 35%, cover;
+    background-size: cover, 35%, contain;
     text-align: center;
   }
 
@@ -225,6 +247,7 @@ top: 38%; */
     flex-wrap: wrap;
     list-style: none;
     max-width: 100%;
+  
   }
 
   .boxes li {
@@ -232,6 +255,8 @@ top: 38%; */
     font-size: 1.6rem;
     color: white;
     text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
+    border: 5px solid white;
+   
   }
 
   .box1 {
@@ -241,7 +266,7 @@ top: 38%; */
       url("./images/mens-category.jpg") 50% center / cover no-repeat;
     /* width: 45%; */
     flex-basis: 100%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 50vw;
     display: flex;
     justify-content: center;
@@ -254,7 +279,7 @@ top: 38%; */
     /* background-image: url("./images/trends-category.jpg"); */
     /* width: 25%; */
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 47vw;
     display: flex;
     justify-content: center;
@@ -265,9 +290,9 @@ top: 38%; */
         0% / cover,
       url("./images/glasses-category.jpg") 50% center / cover no-repeat;
     /* background-image: url("./images/glasses-category.jpg"); */
-    /* width: 25%; */
+    width: 25%;
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 47vw;
     display: flex;
     justify-content: center;
@@ -282,7 +307,7 @@ top: 38%; */
     /* background-image: url("./images/sale-category.jpg"); */
     /* width: 25%; */
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 47vw;
     display: flex;
     justify-content: center;
@@ -295,7 +320,7 @@ top: 38%; */
     /* background-image: url("./images/bags-category.jpg"); */
     /* width: 25%; */
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 47vw;
     display: flex;
     justify-content: center;
@@ -308,7 +333,7 @@ top: 38%; */
     /* background-image: url("./images/womens-category.jpg"); */
     /* width: 45%; */
     flex-basis: 100%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 50vw;
     display: flex;
     justify-content: center;
@@ -328,6 +353,18 @@ top: 38%; */
     font-size: 2rem;
     font-weight: 700;
   }
+
+  .featured button {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
   .main-carousel {
     margin-bottom: 15vw;
   }
@@ -338,17 +375,20 @@ top: 38%; */
     text-align: center;
   }
 
-  .main-carousel .carousel-cell p {
+  .main-carousel .carousel-cell h3 {
     font-family: "raleway-light";
     text-transform: uppercase;
     color: grey;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 2.5rem;
   }
 
-  .main-carousel .carousel-cell p span {
+  .main-carousel .carousel-cell h4 {
+    font-family: "playfair-regular";
     color: coral;
     font-size: 1.2rem;
     text-transform: capitalize;
+    font-weight: 400;
   }
 
   .formbanner {
@@ -360,6 +400,7 @@ top: 38%; */
     background: /* linear-gradient(rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.5)), */ url("./images/wave-bkgd.jpg")
       no-repeat bottom;
     height: 80vw;
+    text-shadow: 2px 2px 8px #000000;
   }
 
   .formbanner h2 {
@@ -368,12 +409,12 @@ top: 38%; */
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: white;
-    text-shadow: 2px 2px 8px #000000;
+    /* text-shadow: 2px 2px 8px #000000; */
   }
 
   .formbanner span {
     font-family: "playfair-bold";
-    text-shadow: 2px 2px 8px #000000;
+    /* text-shadow: 2px 2px 8px #000000; */
   }
 
   .formbanner p {
@@ -383,7 +424,7 @@ top: 38%; */
     font-family: "raleway-light";
     font-weight: 200;
     color: white;
-    text-shadow: 2px 2px 8px #000000;
+    /* text-shadow: 2px 2px 8px #000000; */
   }
 
   .formbanner form {
@@ -394,8 +435,8 @@ top: 38%; */
     color: white;
   }
 
-  input[type="e-mail"] {
-    width: 60vw;
+  input[type="email"] {
+    width: 90vw;
     height: 48px;
     border-radius: 30px;
     padding-left: 25px;
@@ -436,7 +477,7 @@ top: 38%; */
   }
 
   .footer a {
-    color: white;
+    /* color: white; */
     text-decoration-line: underline;
   }
 
@@ -449,12 +490,6 @@ top: 38%; */
     text-align: center;
   }
 
-  .copyright {
-    /* margin: 0 19% 7% 19%; */
-  }
-  .contact {
-    /* margin: 0 0 7% 19%; */
-  }
   .address {
     /* margin: 0 30% 7% 19%; */
     color: grey;
@@ -498,14 +533,13 @@ top: 38%; */
 /* Tablet version here */
 @media screen and (min-width: 600px) {
   .container {
-    width: 100%;
     margin: 1% auto;
     /* padding-bottom: 0.5rem; */
-    padding-top: 1rem;
-    display: flex;
+    /* padding-top: 1rem; */
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
   }
 
   .logo {
@@ -514,8 +548,8 @@ top: 38%; */
   }
 
   .logo img {
-    width: auto;
-    height: 3rem;
+    /* width: auto;
+    height: 3rem; */
     margin-left: 20%;
   }
 
@@ -533,6 +567,10 @@ top: 38%; */
   margin-left: 18%; */
   }
 
+  .count {
+    margin-left: 15%;
+  }
+
   .navitems {
     order: 2;
     width: 60%;
@@ -545,25 +583,25 @@ top: 38%; */
     flex-direction: row;
     /* justify-content: space-between; */
   }
-
+/* 
   .navitems ul li {
     /* margin-right: 1%; */
   }
 
-  .navitems ul li a {
+  /* .navitems ul li a {
     text-decoration: none;
     font-family: "raleway-medium";
-    font-size: 0.9rem;
-  }
+    font-size: 1rem;
+  }  */
 
   .banner {
     background-size: cover, 150px 369px, cover;
     height: 400px;
   }
-  .banner h1 {
+  /* .banner h1 {
     font-size: 2.5rem;
-  }
-
+  } */
+/* 
   .banner2 p {
     display: block;
     margin: 0 5%;
@@ -571,13 +609,13 @@ top: 38%; */
     font-size: 18px;
     font-family: "raleway-light";
     font-weight: 200;
-    /* padding-bottom: 3%; */
+  
     margin-bottom: 5%;
-  }
+  } */
   .boxes li {
-    font-family: "raleway-light";
+    /* font-family: "raleway-light"; */
     font-size: 2.4rem;
-    color: white;
+    /* color: white; */
   }
 
   .box1 {
@@ -587,11 +625,11 @@ top: 38%; */
       url("./images/mens-category.jpg") 50% center / cover no-repeat;
     /* width: 45%; */
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   .box2 {
     background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
@@ -600,11 +638,11 @@ top: 38%; */
     /* background-image: url("./images/trends-category.jpg"); */
     /* width: 25%; */
     flex-basis: 25%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   .box3 {
     background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
@@ -613,11 +651,11 @@ top: 38%; */
     /* background-image: url("./images/glasses-category.jpg"); */
     /* width: 25%; */
     flex-basis: 25%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
 
   .box4 {
@@ -628,11 +666,11 @@ top: 38%; */
     /* background-image: url("./images/sale-category.jpg"); */
     /* width: 25%; */
     flex-basis: 25%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   .box5 {
     background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
@@ -641,11 +679,11 @@ top: 38%; */
     /* background-image: url("./images/bags-category.jpg"); */
     /* width: 25%; */
     flex-basis: 25%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   .box6 {
     background: linear-gradient(rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25)) 0%
@@ -654,53 +692,57 @@ top: 38%; */
     /* background-image: url("./images/womens-category.jpg"); */
     /* width: 45%; */
     flex-basis: 50%;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     height: 30vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
 
   .main-carousel .carousel-cell {
     width: 50%;
   }
 
-  .formbanner h2 {
+  .formbanner {
+    height: 45vw;
+  }
+
+  /* .formbanner h2 {
     font-family: "playfair-italic";
     font-weight: 400;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: white;
     text-shadow: 2px 2px 8px #000000;
-  }
+  } */
 
-  .formbanner span {
+  /* .formbanner span {
     font-family: "playfair-bold";
     text-shadow: 2px 2px 8px #000000;
-  }
+  } */
 
   .formbanner p {
     margin: 2% 8% 8% 8%;
-    line-height: 30px;
+    /* line-height: 30px; */
     font-size: 1.1rem;
-    font-family: "raleway-light";
+    /* font-family: "raleway-light";
     font-weight: 200;
-    color: white;
-    text-shadow: 2px 2px 8px #000000;
+    color: white; */
+    /* text-shadow: 2px 2px 8px #000000; */
     text-align: center;
   }
 
-  .formbanner form {
+  /* .formbanner form {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     color: white;
-  }
+  } */
 
   .footer {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     text-align: left;
   }
@@ -726,15 +768,14 @@ top: 38%; */
 /* The Desk Top Version Below */
 @media screen and (min-width: 1240px) {
   .container {
-    width: 100%;
     max-width: 1240px;
     height: 6vw;
     align-items: center;
   }
 
-  .logo {
+  /* .logo {
     width: 20%;
-  }
+  } */
   .logo img {
     width: 70%;
     height: auto;
@@ -743,10 +784,13 @@ top: 38%; */
     width: 40%;
     height: auto;
   }
+  .count {
+    margin-left: 30%;
+  }
 
   .banner {
     height: 600px;
-    background-size: cover, 15%, cover;
+    background-size: cover, 15vw, contain;
   }
   .banner h1 {
     font-size: 4rem;
@@ -758,6 +802,7 @@ top: 38%; */
 
   .main-carousel {
     height: 40vw;
+    margin-bottom: 6vw;
   }
 
   .main-carousel .carousel-cell {
@@ -773,8 +818,8 @@ top: 38%; */
     margin-bottom: 3%;
   }
 
-  input[type="e-mail"] {
-    width: 40vw;
+  input[type="email"] {
+    width: 30vw;
   }
 
   .footer {

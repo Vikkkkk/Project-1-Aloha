@@ -19,9 +19,10 @@
 </head>
 
 <body>
-    <header>
+    <header id='myHeader'>
 
-        <div class='container'>
+
+        <div class='container' id='myHeader'>
             <div class='logo'>
                 <img src="./images/aloha-logo.svg" alt='aloha-logo'>
             </div>
@@ -37,7 +38,9 @@
                 <!-- the link here only work with ids not classes -->
             </div>
             <div class='cart'>
+                <h5 class='count'>0</h5>
                 <img src='./images/cart-icon.svg' alt='cart-icon' class='cart'>
+
             </div>
 
     </header>
@@ -45,11 +48,11 @@
     <section class="banner">
 
         <h4>NEW COLLECTION</h4>
-        <h1>Spring/Summer 2018</h1>
+        <h1>Spring/Summer 2019</h1>
 
     </section>
     <section class='banner2' id="about">
-        <h1><span>Hand-Crafted </span><b>Styles</h1>
+        <h1><span>Hand-Crafted </span> Styles</h1>
         <p>Aloha Appearl.co sells only the finest ready-to-travel cloting.
             Browse our current selection of products or sign-up for updates below.
         </p>
@@ -86,22 +89,40 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
         <h2>Most-Loved <span>Products</span></h2>
         <ul class='main-carousel'>
             <li class='carousel-cell'> <img src='./images/checked-stretch-dress.jpg'>
-                <p>dresses<br><br><span>Checked Stretch Dress</span><br><br>$129.00</p>
+                <h3>dresses</h3>
+                <h4>Checked Stretch Dress</h4>
+                <h3>$129.00</h3>
+                <button> Add to Cart</button>
             </li>
             <li class='carousel-cell'> <img src='./images/blue-hipster-backpack.jpg'>
-                <p>Bags<br><br><span>Blue Hipster Backpack</span><br><br>$69.00</p>
+                <h3>Bags</h3>
+                <h4>Blue Hipster Backpack</h4>
+                <h3>$69.00</h3>
+                <button> Add to Cart</button>
             </li>
             <li class='carousel-cell'> <img src='./images/blue-silk-dress.jpg'>
-                <p>Bags<br><br><span>Blue Silk Dress</span><br><br>$69.00</p>
+                <h3>Dresses</h3>
+                <h4>Blue Silk Dress</h4>
+                <h3>$119.00</h3>
+                <button> Add to Cart</button>
             </li>
             <li class='carousel-cell'> <img src='./images/cotton-blue-shirt.jpg'>
-                <p>Bags<br><br><span>Cotton Blue Shirt</span><br><br>$69.00</p>
+                <h3>T-Shirt</h3>
+                <h4>Blue Cotton Shirt</h4>
+                <h3>$39.00</h3>
+                <button> Add to Cart</button>
             </li>
             <li class='carousel-cell'> <img src='./images/cotton-yellow-tshirt.jpg'>
-                <p>Bags<br><br><span>Cotton Yellow T-Shirt</span><br><br>$69.00</p>
+                <h3>T-Shirt</h3>
+                <h4>Yellow Cotton Shirt</h4>
+                <h3>$39.00</h3>
+                <button> Add to Cart</button>
             </li>
             <li class='carousel-cell'> <img src='./images/demin-overall-shorts.jpg'>
-                <p>Bags<br><br><span>Demin Overall Shorts</span><br><br>$69.00</p>
+                <h3>Shorts</h3>
+                <h4>Denim Overall Shorts</h4>
+                <h3>$89.00</h3>
+                <button> Add to Cart</button>
             </li>
         </ul>
 
@@ -113,7 +134,7 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
             style tips from our blog. Unsubscribe at any time.</p>
 
         <form action='www.aloha.com/forms' mehtod='POST'>
-            <input type="e-mail" placeholder="Your E-mail">
+            <input type="email" placeholder="Your E-mail" id='e-mail'>
             <input type='submit' value='Subscribe' class='submit'>
         </form>
     </div>
