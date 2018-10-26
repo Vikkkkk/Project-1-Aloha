@@ -19,11 +19,12 @@
 </head>
 
 <body>
+    <a class="screen-reader-text" href="#about">Skip to content</a>
     <header id='myHeader'>
 
 
         <div class='container' id='myHeader'>
-            <div class='logo'>
+            <div class='logo' tabindex="-1">
                 <img src="./images/aloha-logo.svg" alt='aloha-logo'>
             </div>
             <!-- It's better to use relative path rather than absolute path, because if you need to move your 
@@ -72,7 +73,7 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
         </ul>
     </section>
 
-    <section class='featured' id='featured'>
+    <section class='featured' id='featured' tabindex="-1">
         <h2>Most-Loved <span>Products</span></h2>
         <ul class='main-carousel'>
             <li class='carousel-cell'> <img src='./images/checked-stretch-dress.jpg'>
@@ -155,14 +156,14 @@ is not the most efficient, because if we do it like a <ul> it will be much easie
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script async src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
 
     <!-- JavaScript flikity -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script defer src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-    <script src='js/script.js'></script>
+    <script defer src='js/script.js'></script>
 </body>
 
 </html>
